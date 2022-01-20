@@ -15,7 +15,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to CS371" />
+            android:text="Happy birthday" />
     </LinearLayout>
 
     <LinearLayout
@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -42,6 +43,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HOORAY!!" />
+        <Switch
+            android:id="@+id/frostingswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="frosting" />
 
         <Button
             android:id="@+id/button2"
