@@ -109,7 +109,7 @@
                 android:layout_gravity="right"
                 android:layout_margin="5dp"
                 android:gravity="right"
-                android:text="HOORAY!!" />
+                android:text="Blowout" />
 
             <Button
                 android:id="@+id/button2"
@@ -118,7 +118,8 @@
 
                 android:layout_margin="5dp"
                 android:gravity="right"
-                android:text="yay..." />
+                android:onClick="goodbye"
+                android:text="Goodbye" />
         </LinearLayout>
     </LinearLayout>
 

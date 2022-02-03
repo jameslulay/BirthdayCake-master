@@ -9,6 +9,8 @@ import android.view.SurfaceView;
 
 public class CakeView extends SurfaceView {
 
+   private CakeModel;
+
     /* These are the paints we'll use to draw the birthday cake below */
     Paint cakePaint = new Paint();
     Paint frostingPaint = new Paint();
