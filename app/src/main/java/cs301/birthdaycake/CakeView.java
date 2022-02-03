@@ -50,7 +50,7 @@ public class CakeView extends SurfaceView {
     public CakeView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        new cake;
+        cake = new CakeModel();
 
         //This is essential or your onDraw method won't get called
         setWillNotDraw(false);
