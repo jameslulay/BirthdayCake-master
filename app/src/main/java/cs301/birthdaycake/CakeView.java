@@ -74,7 +74,7 @@ public class CakeView extends SurfaceView {
     }
 
 
-    public void getCakeModel(){
+    public CakeModel getCakeModel(){
         return cake;
     }
 
