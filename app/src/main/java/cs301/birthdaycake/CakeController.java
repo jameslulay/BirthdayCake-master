@@ -7,22 +7,26 @@ import android.widget.TextView;
 
 public class CakeController implements View.OnClickListener {
 
-    private CakeView androidsCakeView;
-    private CakeModel sharedCakeModel;
+    private CakeView androidsCakeView; //declares a cakeView variable
+    private CakeModel sharedCakeModel; //declares a cakemodel variable
+
 
     public CakeModel getCakeModel(){
         return sharedCakeModel;
-    }
+    } //might not use, should use cakeview's
 
 
-    public CakeController(CakeView createdCakeView){
-    androidsCakeView = createdCakeView;
-    sharedCakeModel = androidsCakeView.getCakeModel();
+    public CakeController(CakeView createdCakeView){  //ctor
+    androidsCakeView = createdCakeView;               //instantiates the shared cake view
+    sharedCakeModel = androidsCakeView.getCakeModel(); //gets the shared cake model
     }
 
     @Override
-    public void onClick(View button) {
-        Log.d("button2", "HEY this is a test");
+    public void onClick(View button) {    //onclick method for "blow out" button.
+
+        Log.d("button", "HEY this is a test");
+        sharedCakeModel.changeCandleLit(false);
+        androidsCakeView.invalidate();
     }
 
 }

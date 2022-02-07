@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     CakeController newController;
+    CakeModel sharedCakeModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
         Button blowButton = findViewById(R.id.button);
         blowButton.setOnClickListener(newController);
+
+        sharedCakeModel = cakeRef.getCakeModel();
+        boolean candleLit = sharedCakeModel.getCandleLit();
+
+
+
+
 
     }
     public void goodbye(View button) {
