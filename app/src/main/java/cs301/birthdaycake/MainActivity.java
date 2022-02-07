@@ -5,11 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.SeekBar;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
     CakeController newController;
     CakeModel sharedCakeModel;
-
+    Switch switchHasCandles;
+    SeekBar howManyCandles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
         sharedCakeModel = cakeRef.getCakeModel();
         boolean candleLit = sharedCakeModel.getCandleLit();
+
+        switchHasCandles= findViewById(R.id.candlesswitch);
+        switchHasCandles.setOnCheckedChangeListener(newController);
+
+        howManyCandles = findViewById(R.id.seekbarID);
+        howManyCandles.setOnSeekBarChangeListener(newController);
 
 
 

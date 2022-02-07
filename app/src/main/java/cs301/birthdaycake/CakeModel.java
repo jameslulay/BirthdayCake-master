@@ -19,6 +19,14 @@ public class CakeModel {
         this.candleLit = candleLit;
     }
 
+    public void changeHasCandles(boolean hasCandles){
+        this.hasCandles = hasCandles;
+    }
+
+    public boolean getHasCandles(){
+        return hasCandles;
+    }
+
 
 
 
