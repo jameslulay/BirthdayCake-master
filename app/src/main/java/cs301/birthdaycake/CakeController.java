@@ -25,7 +25,7 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
         return sharedCakeModel;
     } //might not use, should use cakeview's
 
-
+//hyhyy
     public CakeController(CakeView createdCakeView){  //ctor
     androidsCakeView = createdCakeView;               //instantiates the shared cake view
     sharedCakeModel = androidsCakeView.getCakeModel(); //gets the shared cake model
