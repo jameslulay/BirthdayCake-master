@@ -50,6 +50,8 @@ public class CakeView extends SurfaceView {
     public CakeView(Context context, AttributeSet attrs) {
 
 
+
+
         super(context, attrs);
 
         sharedCakeModel = new CakeModel();                  //the New cakeModel used for everything
@@ -88,6 +90,8 @@ public class CakeView extends SurfaceView {
     public void drawCandle(Canvas canvas, float left, float bottom) {
 
 
+        canvas.drawText(sharedCakeModel.displayText,400,400,sharedCakeModel.modelPaint);
+
         if (sharedCakeModel.getHasCandles() == true) {
             canvas.drawRect(left, bottom - candleHeight, left + candleWidth, bottom, candlePaint);
 
@@ -121,6 +125,9 @@ public class CakeView extends SurfaceView {
     @Override
     public void onDraw(Canvas canvas)
     {
+
+        canvas.drawText(sharedCakeModel.displayText,500,500,sharedCakeModel.modelPaint);
+
         //top and bottom are used to keep a running tally as we progress down the cake layers
         float top = cakeTop;
         float bottom = cakeTop + frostHeight;

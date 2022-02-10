@@ -31,7 +31,7 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
     sharedCakeModel = androidsCakeView.getCakeModel(); //gets the shared cake model
         tempPaint.setColor(0xFFFF0000);
         tempPaint.setStyle(Paint.Style.FILL);
-        tempPaint.setTextSize(20);
+        tempPaint.setTextSize(50);
         sharedCakeModel.modelPaint = tempPaint;
     }
 
@@ -75,11 +75,13 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
     public boolean onTouch(View view, MotionEvent motionEvent) {
         x = (int)motionEvent.getX();
         y = (int)motionEvent.getY();
-        touchLoc = "," ;
+        touchLoc = x + "," + y;
         sharedCakeModel.displayText = touchLoc;
 
         sharedCakeModel.xx = x;
         sharedCakeModel.yy = y;
+
+        androidsCakeView.invalidate();
 
         return false;
     }

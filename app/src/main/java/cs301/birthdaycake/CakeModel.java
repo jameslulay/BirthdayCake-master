@@ -12,7 +12,10 @@ public class CakeModel {
 
     public boolean hasCandles = true;
 
-    public int xx,yy;
+
+
+    public int xx;
+    public int yy;
 
     public Paint modelPaint;
 
