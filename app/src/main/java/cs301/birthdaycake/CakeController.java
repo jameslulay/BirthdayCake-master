@@ -11,6 +11,7 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
 
     private CakeView androidsCakeView; //declares a cakeView variable
     private CakeModel sharedCakeModel; //declares a cakemodel variable
+    public SeekBar currentBar;
 
 
 
@@ -26,14 +27,12 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
 
     @Override
     public void onClick(View button) {    //onclick method for "blow out" button.
-
         Log.d("button", "HEY this is a test");
         sharedCakeModel.changeCandleLit(false);
         androidsCakeView.invalidate();
     }
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
-
             if (sharedCakeModel.getHasCandles() ==true) {
                 sharedCakeModel.changeHasCandles(false);
                 androidsCakeView.invalidate();
@@ -42,7 +41,6 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
             sharedCakeModel.changeHasCandles(true);
             androidsCakeView.invalidate();
             }
-
         }
 
 
@@ -50,6 +48,7 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
     sharedCakeModel.numCandles = i;
     androidsCakeView.invalidate();
+
     }
 
     @Override

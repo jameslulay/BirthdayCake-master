@@ -143,18 +143,20 @@ public class CakeView extends SurfaceView {
 
         //right candle
         if(sharedCakeModel.numCandles >0) {
-            drawCandle(canvas, cakeLeft + 2 * (cakeWidth / 3) - candleWidth / 3, cakeTop);
+            drawCandle(canvas, 700, cakeTop);
 
             if(sharedCakeModel.numCandles > 1) {
-                drawCandle(canvas, cakeLeft, cakeTop);
+                drawCandle(canvas, cakeLeft + (3*cakeWidth/10), cakeTop);
 
                 if(sharedCakeModel.numCandles >2) {
-                    drawCandle(canvas, cakeLeft + cakeWidth - 40, cakeTop);
+                    drawCandle(canvas, cakeLeft + (7*cakeWidth/10), cakeTop);
 
                     if(sharedCakeModel.numCandles>3) {
-                        drawCandle(canvas, 700, cakeTop);
+
+                        drawCandle(canvas, cakeLeft +  (cakeWidth / 10) - candleWidth / 3, cakeTop);
+
                         if(sharedCakeModel.numCandles>4) {
-                            drawCandle(canvas, cakeLeft + cakeWidth / 3 - candleWidth / 3, cakeTop);
+                            drawCandle(canvas, cakeLeft + (9*cakeWidth/10), cakeTop);
                         }
                     }
 
