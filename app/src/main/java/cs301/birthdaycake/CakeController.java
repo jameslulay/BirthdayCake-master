@@ -77,8 +77,11 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
         y = (int)motionEvent.getY();
         sharedCakeModel.displayText = touchLoc;
 
+        touchLoc = x + "," + y;
+
         sharedCakeModel.xx = x;
         sharedCakeModel.yy = y;
+
 
         androidsCakeView.invalidate();
 
