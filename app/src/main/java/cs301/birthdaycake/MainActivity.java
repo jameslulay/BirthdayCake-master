@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         howManyCandles = findViewById(R.id.seekbarID);
         howManyCandles.setOnSeekBarChangeListener(newController);
 
+        cakeRef.setOnTouchListener(newController);
+
     }
     public void goodbye(View button) {
         Log.i("button", "Goodbye");
