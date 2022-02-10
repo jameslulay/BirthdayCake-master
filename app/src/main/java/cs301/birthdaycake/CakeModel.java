@@ -1,5 +1,7 @@
 package cs301.birthdaycake;
 
+import android.graphics.Paint;
+
 public class CakeModel {
 
     public boolean candleLit = true; //turns candlelight on or off
@@ -9,6 +11,12 @@ public class CakeModel {
     public boolean frosting = true;
 
     public boolean hasCandles = true;
+
+    public int xx,yy;
+
+    public Paint modelPaint;
+
+    public String displayText = "touch";
 
 
     public boolean getCandleLit(){ //getter for candle light

@@ -48,6 +48,8 @@ public class CakeView extends SurfaceView {
      * anyway to initialize the member variables
      */
     public CakeView(Context context, AttributeSet attrs) {
+
+
         super(context, attrs);
 
         sharedCakeModel = new CakeModel();                  //the New cakeModel used for everything
@@ -84,6 +86,7 @@ public class CakeView extends SurfaceView {
      * the position of the bottom left corner of the candle
      */
     public void drawCandle(Canvas canvas, float left, float bottom) {
+
 
         if (sharedCakeModel.getHasCandles() == true) {
             canvas.drawRect(left, bottom - candleHeight, left + candleWidth, bottom, candlePaint);

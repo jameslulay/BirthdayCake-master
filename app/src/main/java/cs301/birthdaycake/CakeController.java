@@ -1,5 +1,6 @@
 package cs301.birthdaycake;
 
+import android.graphics.Paint;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.CompoundButton;
@@ -11,8 +12,12 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
         SeekBar.OnSeekBarChangeListener,View.OnTouchListener {
 
     private CakeView androidsCakeView; //declares a cakeView variable
-    private CakeModel sharedCakeModel; //declares a cakemodel variable
+    public CakeModel sharedCakeModel; //declares a cakemodel variable
     public SeekBar currentBar;
+    public Paint tempPaint = new Paint();
+    public int x,y;
+    public String touchLoc;
+
 
 
 
@@ -24,6 +29,10 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
     public CakeController(CakeView createdCakeView){  //ctor
     androidsCakeView = createdCakeView;               //instantiates the shared cake view
     sharedCakeModel = androidsCakeView.getCakeModel(); //gets the shared cake model
+        tempPaint.setColor(0xFFFF0000);
+        tempPaint.setStyle(Paint.Style.FILL);
+        tempPaint.setTextSize(20);
+        sharedCakeModel.modelPaint = tempPaint;
     }
 
     @Override
@@ -64,6 +73,13 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
+        x = (int)motionEvent.getX();
+        y = (int)motionEvent.getY();
+        touchLoc = "," ;
+        sharedCakeModel.displayText = touchLoc;
+
+        sharedCakeModel.xx = x;
+        sharedCakeModel.yy = y;
 
         return false;
     }
