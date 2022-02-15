@@ -21,6 +21,10 @@ public class CakeModel {
    // public String displayText = "touch";
 
 
+
+
+
+
     public boolean getCandleLit(){ //getter for candle light
         return candleLit;
     }
@@ -36,6 +40,8 @@ public class CakeModel {
     public boolean getHasCandles(){
         return hasCandles;
     }
+
+
 
 
 

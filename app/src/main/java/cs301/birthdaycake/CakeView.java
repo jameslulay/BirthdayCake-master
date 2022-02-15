@@ -21,6 +21,7 @@ public class CakeView extends SurfaceView {
     //lab4 paint
     Paint checkerRed = new Paint();
     Paint checkerGreen = new Paint();
+    Paint baloonRect = new Paint();
 
 
 
@@ -81,6 +82,8 @@ public class CakeView extends SurfaceView {
         checkerRed.setStyle(Paint.Style.FILL);
         checkerGreen.setColor(0xFF11FF11);
         checkerGreen.setStyle(Paint.Style.FILL);
+        baloonRect.setColor(Color.BLUE);
+        baloonRect.setStyle(Paint.Style.FILL);
 
         setBackgroundColor(Color.WHITE);  //better than black default
 
@@ -133,6 +136,9 @@ public class CakeView extends SurfaceView {
      *
      * This method will draw a birthday cake
      */
+
+
+
     @Override
     public void onDraw(Canvas canvas)
     {
@@ -185,7 +191,9 @@ public class CakeView extends SurfaceView {
             }
         }
 
-
+        canvas.drawRect(sharedCakeModel.xx-100, sharedCakeModel.yy -100, sharedCakeModel.xx+100,sharedCakeModel.yy , baloonRect);
+        canvas.drawLine(sharedCakeModel.xx-50,sharedCakeModel.yy -50,sharedCakeModel.xx+50, sharedCakeModel.yy,baloonRect);
+        canvas.drawCircle(sharedCakeModel.xx, sharedCakeModel.yy, 100,baloonRect);
         canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy - 200, sharedCakeModel.xx +200, sharedCakeModel.yy, checkerRed);
         canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy + 200, sharedCakeModel.xx + 200, sharedCakeModel.yy, checkerGreen);
         canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy + 200, sharedCakeModel.xx, sharedCakeModel.yy, checkerRed);
