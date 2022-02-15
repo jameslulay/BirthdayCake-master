@@ -79,7 +79,8 @@ public class CakeView extends SurfaceView {
         //lab4 colors
         checkerRed.setColor(0xFF1111);
         checkerRed.setStyle(Paint.Style.FILL);
-        checkerGreen.setColor();
+        checkerGreen.setColor(0x11FF11);
+        checkerGreen.setStyle(Paint.Style.FILL);
 
         setBackgroundColor(Color.WHITE);  //better than black default
 
@@ -185,10 +186,10 @@ public class CakeView extends SurfaceView {
         }
 
 
-        canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy - 200, sharedCakeModel.xx +200, sharedCakeModel.yy, cakePaint);
-        canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy + 200, sharedCakeModel.xx + 200, sharedCakeModel.yy, frostingPaint);
-        canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy + 200, sharedCakeModel.xx, sharedCakeModel.yy, cakePaint);
-        canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy - 200, sharedCakeModel.xx, sharedCakeModel.yy , frostingPaint);
+        canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy - 200, sharedCakeModel.xx +200, sharedCakeModel.yy, checkerRed);
+        canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy + 200, sharedCakeModel.xx + 200, sharedCakeModel.yy, checkerGreen);
+        canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy + 200, sharedCakeModel.xx, sharedCakeModel.yy, checkerRed);
+        canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy - 200, sharedCakeModel.xx, sharedCakeModel.yy , checkerGreen);
     }//onDraw
 
 }//class CakeView
