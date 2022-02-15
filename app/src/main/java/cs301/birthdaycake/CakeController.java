@@ -32,7 +32,7 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
         tempPaint.setColor(0xFFFF0000);
         tempPaint.setStyle(Paint.Style.FILL);
         tempPaint.setTextSize(50);
-        //sharedCakeModel.modelPaint = tempPaint;
+        sharedCakeModel.modelPaint = tempPaint;
     }
 
     @Override
@@ -79,7 +79,7 @@ public class CakeController implements CompoundButton.OnCheckedChangeListener,Vi
 
         touchLoc = x+","+y;
 
-        //sharedCakeModel.displayText = touchLoc;
+        sharedCakeModel.displayText = touchLoc;
 
 
         sharedCakeModel.xx = x;

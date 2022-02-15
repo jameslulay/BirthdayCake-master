@@ -102,7 +102,7 @@ public class CakeView extends SurfaceView {
     public void drawCandle(Canvas canvas, float left, float bottom) {
 
 
-       // canvas.drawText(sharedCakeModel.displayText,1500,700,sharedCakeModel.modelPaint);
+        canvas.drawText(sharedCakeModel.displayText,1500,700,sharedCakeModel.modelPaint);
 
         if (sharedCakeModel.getHasCandles() == true) {
             canvas.drawRect(left, bottom - candleHeight, left + candleWidth, bottom, candlePaint);

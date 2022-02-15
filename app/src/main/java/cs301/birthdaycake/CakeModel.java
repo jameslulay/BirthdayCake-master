@@ -16,9 +16,9 @@ public class CakeModel {
     public int xx;
     public int yy;
 
-    //public Paint modelPaint;
+    public Paint modelPaint;
 
-   // public String displayText = "touch";
+     public String displayText = "touch";
 
 
 
