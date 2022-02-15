@@ -192,11 +192,12 @@ public class CakeView extends SurfaceView {
             }
         }
 
-
+        //person c
         canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy - 200, sharedCakeModel.xx +200, sharedCakeModel.yy, checkerRed);
         canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy + 200, sharedCakeModel.xx + 200, sharedCakeModel.yy, checkerGreen);
         canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy + 200, sharedCakeModel.xx, sharedCakeModel.yy, checkerRed);
         canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy - 200, sharedCakeModel.xx, sharedCakeModel.yy , checkerGreen);
+        //person b
         canvas.drawLine(sharedCakeModel.xx,sharedCakeModel.yy,sharedCakeModel.xx, sharedCakeModel.yy+400,baloonRect);
         canvas.drawCircle(sharedCakeModel.xx, sharedCakeModel.yy, 100,baloonRect);
     }//onDraw
