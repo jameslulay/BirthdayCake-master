@@ -77,9 +77,9 @@ public class CakeView extends SurfaceView {
         wickPaint.setColor(Color.BLACK);
         wickPaint.setStyle(Paint.Style.FILL);
         //lab4 colors
-        checkerRed.setColor(0xFF1111);
+        checkerRed.setColor(0xFFFF1111);
         checkerRed.setStyle(Paint.Style.FILL);
-        checkerGreen.setColor(0x11FF11);
+        checkerGreen.setColor(0xFF11FF11);
         checkerGreen.setStyle(Paint.Style.FILL);
 
         setBackgroundColor(Color.WHITE);  //better than black default
