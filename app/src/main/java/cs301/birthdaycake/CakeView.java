@@ -18,6 +18,9 @@ public class CakeView extends SurfaceView {
     Paint outerFlamePaint = new Paint();
     Paint innerFlamePaint = new Paint();
     Paint wickPaint = new Paint();
+    //lab4 paint
+    Paint checkerRed = new Paint();
+    Paint checkerGreen = new Paint();
 
 
 
@@ -73,6 +76,10 @@ public class CakeView extends SurfaceView {
         innerFlamePaint.setStyle(Paint.Style.FILL);
         wickPaint.setColor(Color.BLACK);
         wickPaint.setStyle(Paint.Style.FILL);
+        //lab4 colors
+        checkerRed.setColor(0xFF1111);
+        checkerRed.setStyle(Paint.Style.FILL);
+        checkerGreen.setColor();
 
         setBackgroundColor(Color.WHITE);  //better than black default
 
@@ -83,6 +90,7 @@ public class CakeView extends SurfaceView {
         return sharedCakeModel;
     }
 
+
     /**
      * draws a candle at a specified position.  Important:  the left, bottom coordinates specify
      * the position of the bottom left corner of the candle
@@ -90,7 +98,7 @@ public class CakeView extends SurfaceView {
     public void drawCandle(Canvas canvas, float left, float bottom) {
 
 
-        canvas.drawText(sharedCakeModel.displayText,1500,700,sharedCakeModel.modelPaint);
+       // canvas.drawText(sharedCakeModel.displayText,1500,700,sharedCakeModel.modelPaint);
 
         if (sharedCakeModel.getHasCandles() == true) {
             canvas.drawRect(left, bottom - candleHeight, left + candleWidth, bottom, candlePaint);
@@ -113,6 +121,8 @@ public class CakeView extends SurfaceView {
             canvas.drawRect(wickLeft, wickTop, wickLeft + wickWidth, wickTop + wickHeight, wickPaint);
         }
         }
+
+
 
 
     /**
@@ -174,6 +184,11 @@ public class CakeView extends SurfaceView {
             }
         }
 
+
+        canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy - 200, sharedCakeModel.xx +200, sharedCakeModel.yy, cakePaint);
+        canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy + 200, sharedCakeModel.xx + 200, sharedCakeModel.yy, frostingPaint);
+        canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy + 200, sharedCakeModel.xx, sharedCakeModel.yy, cakePaint);
+        canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy - 200, sharedCakeModel.xx, sharedCakeModel.yy , frostingPaint);
     }//onDraw
 
 }//class CakeView

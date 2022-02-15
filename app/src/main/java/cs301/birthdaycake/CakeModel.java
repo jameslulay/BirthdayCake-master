@@ -13,13 +13,12 @@ public class CakeModel {
     public boolean hasCandles = true;
 
 
-
     public int xx;
     public int yy;
 
-    public Paint modelPaint;
+    //public Paint modelPaint;
 
-    public String displayText = "touch";
+   // public String displayText = "touch";
 
 
     public boolean getCandleLit(){ //getter for candle light
