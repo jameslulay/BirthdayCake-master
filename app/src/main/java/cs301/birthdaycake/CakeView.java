@@ -84,6 +84,7 @@ public class CakeView extends SurfaceView {
         checkerGreen.setStyle(Paint.Style.FILL);
         baloonRect.setColor(Color.BLUE);
         baloonRect.setStyle(Paint.Style.FILL);
+        baloonRect.setStrokeWidth(33);
 
         setBackgroundColor(Color.WHITE);  //better than black default
 
@@ -191,13 +192,13 @@ public class CakeView extends SurfaceView {
             }
         }
 
-        canvas.drawRect(sharedCakeModel.xx-100, sharedCakeModel.yy -100, sharedCakeModel.xx+100,sharedCakeModel.yy , baloonRect);
-        canvas.drawLine(sharedCakeModel.xx-50,sharedCakeModel.yy -50,sharedCakeModel.xx+50, sharedCakeModel.yy,baloonRect);
-        canvas.drawCircle(sharedCakeModel.xx, sharedCakeModel.yy, 100,baloonRect);
+
         canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy - 200, sharedCakeModel.xx +200, sharedCakeModel.yy, checkerRed);
         canvas.drawRect(sharedCakeModel.xx, sharedCakeModel.yy + 200, sharedCakeModel.xx + 200, sharedCakeModel.yy, checkerGreen);
         canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy + 200, sharedCakeModel.xx, sharedCakeModel.yy, checkerRed);
         canvas.drawRect(sharedCakeModel.xx - 200, sharedCakeModel.yy - 200, sharedCakeModel.xx, sharedCakeModel.yy , checkerGreen);
+        canvas.drawLine(sharedCakeModel.xx,sharedCakeModel.yy,sharedCakeModel.xx, sharedCakeModel.yy+400,baloonRect);
+        canvas.drawCircle(sharedCakeModel.xx, sharedCakeModel.yy, 100,baloonRect);
     }//onDraw
 
 }//class CakeView
